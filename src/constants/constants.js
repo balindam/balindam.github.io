@@ -12,3 +12,8 @@ export const navBarMenuOptions = [
         title: 'Contact',
     }
 ]
+
+export const themeOptions = Object.freeze({
+    Light: 'light',
+    Dark: 'dark',
+})

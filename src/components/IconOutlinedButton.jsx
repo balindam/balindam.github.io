@@ -4,9 +4,9 @@ import CustomMailIcon from '../assets/icons/CustomMailIcon'
 import './IconOutlinedButton.scss'
 
 
-function IconOutlinedButton({buttonText}) {
+function IconOutlinedButton({buttonText, startIcon, handleOnClick}) {
   return (
-    <Button variant="outlined" className="_icon-outlined-btn" startIcon={<CustomMailIcon />}>{buttonText}</Button>
+    <Button variant="outlined" className="_icon-outlined-btn" startIcon={startIcon} onClick={handleOnClick}>{buttonText}</Button>
   )
 }
 

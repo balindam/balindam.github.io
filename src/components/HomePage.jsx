@@ -4,12 +4,13 @@ import Footer from './Footer'
 import NavBar from './NavBar'
 import { navBarMenuOptions } from '../constants/constants'
 
+import './HomePage.scss'
+
 const HomePage = () => {
   return (
-    <Box>
+    <Box className="_home_page_container">
         <Grid>
             <NavBar navBarMenuOptions={navBarMenuOptions}/>
-            <Footer />
         </Grid>
     </Box>
   )
