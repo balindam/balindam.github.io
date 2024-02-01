@@ -7,6 +7,7 @@ import './HomePage.scss'
 import ProfileButtonsContainer from './ProfileButtonsContainer'
 import AboutContainer from './AboutContainer'
 import DownArrowIcon from 'assets/icons/DownArrowIcon'
+import ExperienceContainer from 'components/Experience/ExperienceContainer'
 
 const HomePage = () => {
   return (
@@ -26,6 +27,11 @@ const HomePage = () => {
             <DownArrowIcon />
           </Grid>
         </Grid>
+
+        <Grid>
+          <ExperienceContainer />
+        </Grid>
+
       </Grid>
     </Box>
   )
