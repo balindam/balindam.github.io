@@ -1,7 +1,16 @@
-@import "variables.scss";
+@import "../../variables.scss";
 
 ._home_page_container {
     width: 100vw;
     height: 100vh;
+}
+
+._home_page_container_dark_theme {
     background: $home_page_bg-color_dark_theme;
+    color: $home_page_text-color_dark_theme;
+}
+
+._home_page_container_light_theme {
+    background: $home_page_bg-color_light_theme;
+    color: $home_page_text-color_light_theme;
 }

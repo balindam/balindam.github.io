@@ -2,7 +2,7 @@ import React from 'react'
 import SvgIcon from '@mui/material/SvgIcon'
 import { themeOptions } from 'constants/constants'
 
-const LinkedInIcon = ({theme = themeOptions.Dark}) => {
+const GithubIcon = ({theme = themeOptions.Dark}) => {
   return (
     <SvgIcon>
         {theme === themeOptions.Dark ? (
@@ -18,4 +18,4 @@ const LinkedInIcon = ({theme = themeOptions.Dark}) => {
   )
 }
 
-export default LinkedInIcon
+export default GithubIcon

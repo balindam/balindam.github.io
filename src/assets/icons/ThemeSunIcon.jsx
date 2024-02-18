@@ -2,7 +2,8 @@ import React from 'react'
 import SvgIcon from '@mui/material/SvgIcon'
 import { themeOptions } from 'constants/constants'
 
-const ThemeSunIcon = ({theme = themeOptions.Dark}) => {
+const ThemeSunIcon = ({theme}) => {
+    console.log('hfg',theme);
   return (
     <SvgIcon>
         {theme === themeOptions.Dark ? (

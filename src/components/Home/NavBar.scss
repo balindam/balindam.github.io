@@ -1,5 +1,16 @@
 @import 'variables.scss';
 
 ._navbar_menu_container {
+    display: flex;
+    ._navbar_dark_theme {
+        background: inherit !important;
+        box-shadow: none !important;
+        ._navbar_menu_container {
+            display: flex;
+        }
+    }
     
-} 
+    ._navbar_light_theme {
+        
+    }
+}

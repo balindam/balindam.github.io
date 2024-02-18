@@ -1,35 +1,34 @@
-import { AppBar, Box, IconButton, Tab, Tabs } from '@mui/material'
+import { AppBar, Box, IconButton, Tab, Tabs, Typography } from '@mui/material'
 import React from 'react'
 
-import ThemeSunIcon from 'assets/icons/ThemeSunIcon';
-import './NavBar.scss'
+import ThemeSunIcon from 'assets/icons/ThemeSunIcon'
+import 'components/Home/NavBar.scss'
+import { DarkModeContext, useTheme } from 'context/ThemeContext'
+import { themeOptions } from 'constants/constants'
 
 const NavBar = ({navBarMenuOptions}) => {
 
+    const { theme, toggleTheme } = useTheme();
+    console.log(theme);
+
     const [currentMenuOption, setCurrentMenuOptions] = React.useState()
 
-    const handleMenuOptionOnClick = (_, newValue) => {
-        console.log(newValue);
-        setCurrentMenuOptions(newValue)
-    }
   return (
-    <AppBar position='static'>
         <Box className="_navbar_menu_container">
 
             {/* TODO: add logo */}
 
-            <Tabs value={currentMenuOption} onChange={handleMenuOptionOnClick}>
                 {navBarMenuOptions.map(option => (
-                    <Tab label={option.title} key={`${option.id}_${option.title}`} />
+                    <Typography key={`${option.id}_${option.title}`}>{option.title}</Typography>
                 ))}
-             </Tabs>
 
-             <IconButton aria-label='theme-switch'>
-                <ThemeSunIcon />
+
+             <IconButton aria-label='theme-switch' onClick={toggleTheme}>
+                <ThemeSunIcon theme={theme} />
              </IconButton>
 
         </Box>
-    </AppBar>
+
   )
 }
 
